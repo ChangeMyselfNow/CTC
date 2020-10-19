@@ -1,0 +1,125 @@
+@charset "utf-8";
+*,
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+label,
+th,
+td,
+img {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[disabled],
+button[disabled] {
+    cursor: not-allowed;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #c0c4cc;
+}
+
+label {
+    user-select: none;
+}
+
+.fn-hide {
+    overflow: hidden;
+}
+
+.fn-clear {
+    clear: both;
+    zoom: 1;
+}
+
+.fn-clear:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.fn-left {
+    float: left;
+}
+
+.fn-right {
+    float: right;
+}
+
+.fn-inline {
+    display: inline-block;
+}
