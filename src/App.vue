@@ -23,8 +23,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
 #app {
   height: 100%;
+  .content{
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
 }
 </style>

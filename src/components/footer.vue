@@ -1,9 +1,11 @@
 <template>
   <div class="footer">
     <div class="footer_top">
-      <ul>
-        <li class="foot_left"></li>
-        <li class="foot_center">
+      <ul class="list_main">
+        <li class="foot_left list_main_li">
+          <img src="@/assets/image/footerbg.png" />
+        </li>
+        <li class="foot_center list_main_li">
           <ul class="top_content">
             <li>地址：中国深圳</li>
             <li>邮编：518000</li>
@@ -12,7 +14,7 @@
             <li>客服电话：4008-888-888</li>
           </ul>
         </li>
-        <li class="footer_right"></li>
+        <li class="footer_right list_main_li"></li>
       </ul>
     </div>
     <div class="footer_bottom">
@@ -42,15 +44,21 @@ export default {
   .footer_top {
     width: 100%;
     height: 200px;
+    padding:0 180px;
     background: #3f3f3f;
-    ul li {
-      color: #8e8e8e;
-      line-height: 26px;
-      padding-top: 6px;
-      font-size: 10px;
-    }
-    .top_content{
-      float: left;
+    .list_main {
+      .list_main_li{
+        float: left;
+      }
+      ul li {
+        color: #8e8e8e;
+        line-height: 26px;
+        padding-top: 6px;
+        font-size: 10px;
+      }
+      .top_content {
+        float: left;
+      }
     }
   }
   .footer_bottom {
