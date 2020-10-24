@@ -24,12 +24,12 @@ Vue.use(VueRouter)
 const routers = new VueRouter({
     mode: 'history',
     routes: [{
-            name: "",
+            name: "home",
             path: "/",
             component: mainPage
         },
         {
-            name: "",
+            name: "aboutus",
             path: "/aboutus",
             component: aboutus
         },
@@ -44,7 +44,7 @@ const routers = new VueRouter({
         //     component: contact
         // },
         {
-            name: "",
+            name: "product",
             path: "/product",
             component: product
         },
@@ -54,8 +54,8 @@ const routers = new VueRouter({
         //     component: p2
         // },
         {
-            name: "",
-            path: "/research/",
+            name: "research",
+            path: "/research",
             component: research
         },
         // {
@@ -69,7 +69,7 @@ const routers = new VueRouter({
         //     component: team
         // },
         {
-            name: "",
+            name: "hezuo",
             path: "/hezuo",
             component: hezuo
         }

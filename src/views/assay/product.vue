@@ -6,14 +6,14 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li :class="showIndex == 4 ? 'active' : ''" @click="showIndex = 4">无创产前DNA</li>
-          <li :class="showIndex == 5 ? 'active' : ''" @click="showIndex = 5">CTC检查</li>
+          <li :class="showIndex == 1 ? 'active' : ''" @click="$router.push('/product?showIndex=1')">无创产前DNA</li>
+          <li :class="showIndex == 2 ? 'active' : ''" @click="$router.push('/product?showIndex=2')">CTC检查</li>
         </ul>
       </div>
     </div>
     <div class="content_right">
-      <ctc-pone v-if="showIndex == 4"></ctc-pone>
-      <ctc-ptwo v-if="showIndex == 5"></ctc-ptwo>
+      <ctc-pone v-if="showIndex == 1"></ctc-pone>
+      <ctc-ptwo v-if="showIndex == 2"></ctc-ptwo>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default{
   },
   data() {
     return {
-      showIndex: 4,
+      showIndex: 1,
     };
   },
   created() {
@@ -43,7 +43,7 @@ export default{
       if (nv) {
         this.showIndex = nv;
       }else {
-        this.showIndex = 4;
+        this.showIndex = 1;
       }
     }
   }

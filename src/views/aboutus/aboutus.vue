@@ -6,9 +6,9 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li :class="showIndex == 1 ? 'active' : ''" @click="showIndex = 1">公司简介</li>
-          <li :class="showIndex == 2 ? 'active' : ''" @click="showIndex = 2">新闻动态</li>
-          <li :class="showIndex == 3 ? 'active' : ''" @click="showIndex = 3">联系我们</li>
+          <li :class="showIndex == 1 ? 'active' : ''" @click="$router.push('/aboutus?showIndex=1')">公司简介</li>
+          <li :class="showIndex == 2 ? 'active' : ''" @click="$router.push('/aboutus?showIndex=2')">新闻动态</li>
+          <li :class="showIndex == 3 ? 'active' : ''" @click="$router.push('/aboutus?showIndex=3')">联系我们</li>
         </ul>
       </div>
     </div>

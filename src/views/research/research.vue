@@ -6,16 +6,16 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li :class="showIndex == 6 ? 'active' : ''" @click="showIndex = 6">技术团队</li>
-          <li :class="showIndex == 7 ? 'active' : ''" @click="showIndex = 7">成果与专利</li>
-          <li :class="showIndex == 8 ? 'active' : ''" @click="showIndex = 8">案例分享</li>
+          <li :class="showIndex == 1 ? 'active' : ''" @click="$router.push('/research?showIndex=1')">技术团队</li>
+          <li :class="showIndex == 2 ? 'active' : ''" @click="$router.push('/research?showIndex=2')">成果与专利</li>
+          <li :class="showIndex == 3 ? 'active' : ''" @click="$router.push('/research?showIndex=3')">案例分享</li>
         </ul>
       </div>
     </div>
     <div class="content_right">
-      <ctc-team v-if="showIndex == 6"></ctc-team>
-      <ctc-chengguo v-if="showIndex == 7"></ctc-chengguo>
-      <ctc-anli v-if="showIndex == 8"></ctc-anli>
+      <ctc-team v-if="showIndex == 1"></ctc-team>
+      <ctc-chengguo v-if="showIndex == 2"></ctc-chengguo>
+      <ctc-anli v-if="showIndex == 3"></ctc-anli>
       
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
       if (nv) {
         this.showIndex = nv;
       }else {
-        this.showIndex = 6;
+        this.showIndex = 1;
       }
     }
   }
