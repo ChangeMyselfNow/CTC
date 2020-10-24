@@ -6,6 +6,8 @@ import Element from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/swiper-bundle.css'
+import Swiper2, { Navigation, Pagination, Autoplay } from "swiper"
+Swiper2.use([Navigation, Pagination, Autoplay])
 Vue.use(VueAwesomeSwiper)
 Vue.use(Element)
 Vue.config.productionTip = false

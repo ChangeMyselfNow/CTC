@@ -6,9 +6,9 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li @click="showIndex = 6">技术团队</li>
-          <li @click="showIndex = 7">成果与专利</li>
-          <li @click="showIndex = 8">案例分享</li>
+          <li :class="showIndex == 6 ? 'active' : ''" @click="showIndex = 6">技术团队</li>
+          <li :class="showIndex == 7 ? 'active' : ''" @click="showIndex = 7">成果与专利</li>
+          <li :class="showIndex == 8 ? 'active' : ''" @click="showIndex = 8">案例分享</li>
         </ul>
       </div>
     </div>
@@ -43,10 +43,20 @@ export default {
     console.log(this.$route.query);
   },
   methods: {},
+  watch: {
+    "$route.query.showIndex": function(nv) {
+      if (nv) {
+        this.showIndex = nv;
+      }else {
+        this.showIndex = 6;
+      }
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
 .research {
+  margin-top: 40px;
   display: flex;
   padding: 0 50px;
   .content_left {

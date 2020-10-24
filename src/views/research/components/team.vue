@@ -3,8 +3,8 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{path:'/'}"><i class="el-icon-s-home"></i>首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{path:'/'}">科研中心</el-breadcrumb-item>
-        <el-breadcrumb-item >技术团队</el-breadcrumb-item>
+        <el-breadcrumb-item>科研中心</el-breadcrumb-item>
+        <el-breadcrumb-item>技术团队</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="content">

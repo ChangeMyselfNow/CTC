@@ -6,8 +6,8 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li @click="showIndex = 4">无创产前DNA</li>
-          <li @click="showIndex = 5">CTC检查</li>
+          <li :class="showIndex == 4 ? 'active' : ''" @click="showIndex = 4">无创产前DNA</li>
+          <li :class="showIndex == 5 ? 'active' : ''" @click="showIndex = 5">CTC检查</li>
         </ul>
       </div>
     </div>
@@ -38,10 +38,20 @@ export default{
     console.log(this.$route.query);
   },
   methods: {},
+  watch: {
+    "$route.query.showIndex": function(nv) {
+      if (nv) {
+        this.showIndex = nv;
+      }else {
+        this.showIndex = 4;
+      }
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
 .product {
+  margin-top: 40px;
   display: flex;
   padding: 0 50px;
   .content_left {

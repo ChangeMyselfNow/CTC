@@ -20,52 +20,103 @@
             text-color="black"
             active-text-color="#1989FA"
           >
-            <el-menu-item index="1" @click="$router.push('/')">网站首页</el-menu-item>
-
+            <el-menu-item index="1" @click="$router.push('/')"
+              >网站首页</el-menu-item
+            >
 
             <el-submenu index="2">
               <template slot="title">关于我们</template>
-              <el-menu-item index="2-1" @click="$router.push({path: '/aboutus',query: { showIndex: 1 }})">公司简介</el-menu-item>
+              <el-menu-item
+                index="2-1"
+                @click="
+                  $router.push({ path: '/aboutus', query: { showIndex: 1 } })
+                "
+                >公司简介</el-menu-item
+              >
               <el-menu-item
                 index="2-2"
-                @click="$router.push({path: '/aboutus',query: { showIndex: 2 }})">新闻动态</el-menu-item>
-              <el-menu-item index="2-3" @click="$router.push({path: '/aboutus',query: { showIndex: 3 }})">联系我们</el-menu-item>
+                @click="
+                  $router.push({ path: '/aboutus', query: { showIndex: 2 } })
+                "
+                >新闻动态</el-menu-item
+              >
+              <el-menu-item
+                index="2-3"
+                @click="
+                  $router.push({ path: '/aboutus', query: { showIndex: 3 } })
+                "
+                >联系我们</el-menu-item
+              >
             </el-submenu>
-
-
 
             <el-submenu index="3">
               <template slot="title">化验项目</template>
-              <el-menu-item index="3-1" @click="$router.push({path: '/product',query: { showIndex:4 }})">无创产前DNA</el-menu-item>
-              <el-menu-item index="3-2" @click="$router.push({path: '/product',query: { showIndex:5 }})">CTC检查</el-menu-item>
+              <el-menu-item
+                index="3-1"
+                @click="
+                  $router.push({ path: '/product', query: { showIndex: 4 } })
+                "
+                >无创产前DNA</el-menu-item
+              >
+              <el-menu-item
+                index="3-2"
+                @click="
+                  $router.push({ path: '/product', query: { showIndex: 5 } })
+                "
+                >CTC检查</el-menu-item
+              >
             </el-submenu>
-
 
             <el-submenu index="4">
               <template slot="title">科研中心</template>
-              <el-menu-item index="4-1" @click="$router.push({path: '/research',query: { showIndex:6 }})">技术团队</el-menu-item>
+              <el-menu-item
+                index="4-1"
+                @click="
+                  $router.push({ path: '/research', query: { showIndex: 6 } })
+                "
+                >技术团队</el-menu-item
+              >
               <el-menu-item
                 index="4-2"
-                @click="$router.push({path: '/research',query: { showIndex: 7 }})">成果与专利</el-menu-item>
-              <el-menu-item index="4-3" @click="$router.push({path: '/research',query: { showIndex:8 }})">案例分享</el-menu-item>
+                @click="
+                  $router.push({ path: '/research', query: { showIndex: 7 } })
+                "
+                >成果与专利</el-menu-item
+              >
+              <el-menu-item
+                index="4-3"
+                @click="
+                  $router.push({ path: '/research', query: { showIndex: 8 } })
+                "
+                >案例分享</el-menu-item
+              >
             </el-submenu>
 
-
-
-            <el-menu-item index="5" @click="$router.push('/hezuo')">医疗合作</el-menu-item>
+            <el-menu-item index="5" @click="$router.push('/hezuo')"
+              >医疗合作</el-menu-item
+            >
           </el-menu>
         </div>
       </div>
     </div>
-    <div class="header_bottom">
-      <!-- <div class="imageswiper">
-        <swiper>
-          <swiper-slide v-for="item in imagesList" :key="item.id">
-            <img :scr="item.idView" class="imagesbox" />
-          </swiper-slide>
-        </swiper>
-      </div> -->
-    </div>
+    <el-carousel indicator-position="none" height="550px">
+    <el-carousel-item v-for="item in imagesList" :key="item.id">
+      <img :src="item.idView" class="imageBox">
+    </el-carousel-item>
+  </el-carousel>
+    <!-- <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>
+        <img style="width:100%;height:350px;" src="@/assets/image/1-1FRG35Q20-L.jpg">
+      </swiper-slide>
+      <swiper-slide>
+        <img style="width:100%;height:350px;" src="@/assets/image/287667465S30-L.jpg">
+      </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+      <div class="swiper-button-prev swiper-button-white" slot="button-prev" @click="next"></div>
+      <div class="swiper-button-next swiper-button-white" slot="button-next" @click="prev"></div>
+    </swiper> -->
+      
+      
   </div>
 </template>
 <script>
@@ -75,29 +126,49 @@ export default {
     return {
       activeIndex: "1",
       imagesList: [
-        { id: 0, idView: require("../assets/image/1-1FRG35Q20-L.jpg") },
-        { id: 1, idView: require("../assets/image/287667465S30-L.jpg") },
+        { id: 0, idView: require("@/assets/image/1-1FRG35Q20-L.jpg") },
+        { id: 1, idView: require("@/assets/image/287667465S30-L.jpg")},
+        { id: 2, idView: require("@/assets/image/1-1FRG35Q20-L.jpg") },
+        { id: 3, idView: require("@/assets/image/287667465S30-L.jpg")},
       ],
+      // swiperOptions:{
+      //   pagination:{
+      //     el:'.swiper-pagination',
+      //     clickable:true//设置分页可点击
+      //   },
+      //   loop:true,
+      //   autoplay:true,
+      //   observe:true,
+      //   observeParents:true,
+      //   navigation:{
+      //     nextEl:'swiper-button-next',
+      //     prevEl:'swiper-button-prev',
+      //   }
+        
+      // }
     };
   },
-  created() {},
+  created() {
+    
+  },
+  computed:{
+    swiper(){
+      return this.$refs.mySwiper.$swiper
+    }
+  },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-    // imgLoad(){
-    //   this.$nextTick(()=>{
-    //     this.bannerHeight = this.$refs.bannerHeight[0].height;
-    //     console.log(this.$refs.bannerHeight[0].height);
-    //   })
-    // }
+    prev(){
+      this.swiper.slidePrev();
+    },
+    next(){
+      this.swiper.slideNext();
+    }
   },
   mounted() {
-    // this.imgLoad();
-    // window.addEventListener('resize',()=>{
-    //   this.bannerHeight = this.$refs.bannerHeight[0].height;
-    //   this.imgLoad();
-    // },false)
+
   },
 };
 </script>
@@ -113,11 +184,9 @@ export default {
     border: none;
   }
 }
-.header_bottom {
+.imageBox{
   width: 100%;
-  .imageSwiper {
-    width: 100%;
-    height: 100%;
-  }
+  height: 100%;
 }
+
 </style>

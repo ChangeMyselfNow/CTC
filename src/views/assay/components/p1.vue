@@ -3,7 +3,7 @@
     <div class="breadcrumb">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{path:'/'}"><i class="el-icon-s-home"></i>首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{path:'/'}">化验项目</el-breadcrumb-item>
+        <el-breadcrumb-item>化验项目</el-breadcrumb-item>
         <el-breadcrumb-item >无创产前DNA</el-breadcrumb-item>
       </el-breadcrumb>
     </div>

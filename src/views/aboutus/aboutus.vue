@@ -6,9 +6,9 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li @click="showIndex = 1">公司简介</li>
-          <li @click="showIndex = 2">新闻动态</li>
-          <li @click="showIndex = 3">联系我们</li>
+          <li :class="showIndex == 1 ? 'active' : ''" @click="showIndex = 1">公司简介</li>
+          <li :class="showIndex == 2 ? 'active' : ''" @click="showIndex = 2">新闻动态</li>
+          <li :class="showIndex == 3 ? 'active' : ''" @click="showIndex = 3">联系我们</li>
         </ul>
       </div>
     </div>
@@ -55,6 +55,7 @@ export default {
 </script>
 <style lang='scss' scoped>
 .aboutUs {
+  margin-top: 40px;
   display: flex;
   padding: 0 50px;
   .content_left {

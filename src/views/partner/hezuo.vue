@@ -6,7 +6,7 @@
       </div>
       <div class="list_content">
         <ul class="content_ul">
-          <li>医疗合作</li>
+          <li class="active">医疗合作</li>
         </ul>
       </div>
     </div>
@@ -16,13 +16,12 @@
           <el-breadcrumb-item :to="{ path: '/' }"
             ><i class="el-icon-s-home"></i>首页</el-breadcrumb-item
           >
-          <el-breadcrumb-item :to="{ path: '/' }">医疗合作</el-breadcrumb-item>
+          <el-breadcrumb-item>医疗合作</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
       <div class="content">
         <p>
-          CTC检查化验所成立于2009年，总部在深圳，全国有56家医学化验所，每家医学化验所都由卫建委批准，同时联合国内多家医院和医学化验所，遍布北京，上海，广州，
-          深圳，天津，成都，杭州，苏州，重庆，武汉，南京，大连，沈阳，长沙，郑州，西安，青岛，无锡，济南，宁波，佛山，哈尔滨，东莞，福州，
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt suscipit fugit iusto, sed a eligendi consequuntur est facilis porro quia id, vero autem sit reprehenderit magnam tempore doloribus possimus laborum. Cum, modi similique ipsam quae vitae maiores, minus expedita aut provident deserunt eius in officia dicta maxime veritatis hic molestias ipsa eligendi laboriosam quos delectus, deleniti accusantium itaque? Mollitia quisquam, eveniet vitae voluptatem officiis iste illo, amet nemo earum dolorum qui ipsum. Eligendi numquam minus aut enim perspiciatis nobis, sit consequatur ab eveniet sint soluta praesentium, iste, itaque dolorum
         </p>
       </div>
     </div>
@@ -40,6 +39,7 @@ export default {
 </script>
 <style lang='scss' scoped>
 .hezuo {
+  margin-top: 40px;
   display: flex;
   padding: 0 50px;
   .content_left {
