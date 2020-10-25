@@ -19,8 +19,8 @@
     </div>
     <div class="footer_bottom">
       <div class="bottom_content">
-        <p>Copyright © 2002-2020 CTC 版权所有 技术支持：香港化验所</p>
-        <p>友情链接：<span class="link_qzjd">亲子鉴定</span></p>
+        <p>Copyright © 2002-2020 CTC 版权所有 技术支持：CTC检查</p>
+        <p>友情链接：<a class="link_qzjd" href="http://www.chingdnaup.com/" target="_blank">亲子鉴定</a></p>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@ export default {
   .footer_top {
     width: 100%;
     height: 200px;
-    padding:0 180px;
+    padding: 20px 180px;
     background: #3f3f3f;
     .list_main {
       .list_main_li{
@@ -64,8 +64,8 @@ export default {
   .footer_bottom {
     text-align: center;
     width: 100%;
-    height: 50px;
     background: #333;
+    padding: 20px 0;
     .bottom_content {
       p {
         line-height: 23px;

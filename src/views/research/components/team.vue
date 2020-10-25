@@ -42,7 +42,8 @@ export default {
       })
     },
     toDetail(id){
-      this.$router.push("/detail?id="+id)
+      // this.$router.push("/detail?id="+id)
+      this.$router.push({path: "/detail", query: {id, fm: '4-1'}})
     }
   }
 };

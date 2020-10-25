@@ -1,13 +1,11 @@
 <template>
 	<div class="header">
 		<div class="header_top">
-			<div class="left-content">
-				<div id="logo">
-					<img
-						:src="require('@assets/logo/logo.png')"
-						alt="CTC检查是什么检查-CTC检查费用是多少-CTC检查机构-CTC检查多少钱一次"
-					/>
-				</div>
+			<div class="left-content" @click="$router.push('/')">
+				<img
+					:src="require('@assets/logo/logo.png')"
+					alt="CTC检查是什么检查-CTC检查费用是多少-CTC检查机构-CTC检查多少钱一次"
+				/>
 			</div>
 			<div class="right-content">
 				<div id="search"></div>
@@ -140,9 +138,16 @@ export default {
 	justify-content: space-between;
 	padding: 0 50px;
 	width: 100%;
-	height: 150px;
+	height: 120px;
 	.el-menu--horizontal {
 		border: none;
+	}
+	.left-content {
+		cursor: pointer;
+		img {
+			height: 100px;
+			width: 300px;
+		}
 	}
 }
 .imageBox {

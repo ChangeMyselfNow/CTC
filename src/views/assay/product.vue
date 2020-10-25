@@ -18,8 +18,8 @@
   </div>
 </template>
 <script>
-import ctcPone from "../assay/components/p1.vue";
-import ctcPtwo from "../assay/components/p2.vue"
+import ctcPone from "../assay/components/dna.vue";
+import ctcPtwo from "../assay/components/ctc.vue"
 export default{
   name: "",
   components: {
@@ -53,7 +53,8 @@ export default{
 .product {
   margin-top: 40px;
   display: flex;
-  padding: 0 50px;
+  width: 80%;
+  margin: 0 auto;
   .content_left {
     width:300px;
     .image_content{

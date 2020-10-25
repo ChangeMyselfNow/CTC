@@ -41,7 +41,8 @@ export default {
 .hezuo {
   margin-top: 40px;
   display: flex;
-  padding: 0 50px;
+  width: 80%;
+  margin: 0 auto;
   .content_left {
     width: 300px;
     .image_content {
