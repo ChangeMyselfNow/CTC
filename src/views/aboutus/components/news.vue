@@ -11,16 +11,16 @@
     </div>
     <div class="content">
       <ul>
-        <li v-for="(item, index) in article" :key="index">
+        <li v-for="(item, index) in article" :key="index" @click="toDetail(item._id)">
           <div class="articleImage">
-            <img :src="item.idView" />
+            <img :src="item.coverUrl" />
           </div>
           <div class="articleContent">
             <p class="pTop">
               <span class="pTitle">{{ item.title }}</span>
-              <span class="pTime">{{ item.times }}</span>
+              <span class="pTime">{{ dateFormat('yyyy-MM-dd', item.createdTime) }}</span>
             </p>
-            <p class="pBottom">{{ item.content }}</p>
+            <p class="pBottom">{{ item.remark }}</p>
           </div>
         </li>
       </ul>
@@ -28,51 +28,37 @@
   </div>
 </template>
 <script>
+import {getNews} from "@/api/api" 
+import {dateFormat} from '@/utils/common';
 export default {
   name: "",
   data() {
     return {
-      article: [
-        {
-          idView: require("@/assets/image/1-1FR2162IIS-lp.jpg"),
-          title: "CTCT检查机构",
-          times: "2020-09-02",
-          content:
-            "吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国",
-        }, 
-        {
-          idView: require("@/assets/image/1-1FR2162IIS-lp.jpg"),
-          title: "CTCT检查机构",
-          times: "2020-09-02",
-          content:
-            "吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国",
-        },
-        {
-          idView: require("@/assets/image/1-1FR2162IIS-lp.jpg"),
-          title: "CTCT检查机构",
-          times: "2020-09-02",
-          content:
-            "吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国",
-        },
-        {
-          idView: require("@/assets/image/1-1FR2162IIS-lp.jpg"),
-          title: "CTCT检查机构",
-          times: "2020-09-02",
-          content:
-            "吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国",
-        },
-        {
-          idView: require("@/assets/image/1-1FR2162IIS-lp.jpg"),
-          title: "CTCT检查机构",
-          times: "2020-09-02",
-          content:
-            "吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国吴一龙坦言，这也是中国创新药走出国门的必经之路。中国创新药要想走出国门，必须要接受国际市场的检验，必须进行国际多中心临床试验，必须符合国",
-        }
-      ],
+      article: [],
+      
     };
   },
-  created() {},
-  methods: {},
+  created() {
+    this.getNewsList();
+  },
+  methods: {
+    dateFormat,
+    getNewsList(){
+      let params = {
+        type:'us_news'
+      }
+      getNews(params).then(res =>{
+        console.log(res)
+        if(res.code == 200){
+          this.article = res.data;
+        }
+      })
+    },
+    toDetail(id){
+      this.$router.push("/detail?id="+id)
+    }
+    
+  },
 };
 </script>
 <style lang='scss' scoped>
@@ -94,6 +80,7 @@ export default {
           width: 200px;
           img {
             width: 100%;
+            height: 130px;
             
           }
         }
@@ -103,9 +90,9 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             border-bottom: 1px solid #ececec;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
             .pTitle {
               font-size: 16px;
             }
@@ -116,11 +103,11 @@ export default {
           .pBottom {
             font-size: 12px;
             color: #878787;
-            line-height: 24px;
+            line-height: 28px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
           }
         }

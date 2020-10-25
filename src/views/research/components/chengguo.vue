@@ -8,7 +8,11 @@
       </el-breadcrumb>
     </div>
     <div class="content">
-      
+      <ul class="chengguoImage">
+        <li v-for="(item,index) in cgImages" :key="index">
+          <img :src="item.url" class="cgImage">
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -17,7 +21,20 @@ export default {
   name: '',
   data() {
     return {
-      
+      cgImages:[
+        {
+          url:require("@/assets/image/1-1FR21G010S5.png")
+        },
+        {
+          url:require("@/assets/image/1-1FR21G010S5.png")
+        },
+        {
+          url:require("@/assets/image/1-1FR21G010S5.png")
+        },
+        {
+          url:require("@/assets/image/1-1FR21G010S5.png")
+        }
+      ]
     };
   },
   created() {
@@ -37,7 +54,25 @@ export default {
     }
     .content{
       width: 100%;
-      margin-top:15px;
+      .chengguoImage{
+          width: 100%;
+          li{
+            float: left;
+            overflow: hidden;
+            width: 30%;
+            margin-left: 5%;
+            margin-top: 3%;
+            &:first-child{
+              margin-left: 0;
+            }
+            &:last-child{
+              margin-left: 0;
+            }
+            img{
+              width: 100%;
+          }
+        }
+      }
     }
   }
 </style>

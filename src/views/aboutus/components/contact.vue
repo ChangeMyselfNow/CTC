@@ -8,9 +8,8 @@
       </el-breadcrumb>
     </div>
     <div class="content">
-      <p>CTC检查化验所成立于2009年，总部在深圳，全国有56家医学化验所，每家医学化验所都由卫建委批准，同时联合国内多家医院和医学化验所，遍布北京，上海，广州，
-        深圳，天津，成都，杭州，苏州，重庆，武汉，南京，大连，沈阳，长沙，郑州，西安，青岛，无锡，济南，宁波，佛山，哈尔滨，东莞，福州，
-      </p>
+      <p>CTC检查是什么检查、CTC检查费用是多少、CTC检测</p>
+      <img src="@/assets/image/1-200Z2224Q0954.jpg" alt="">
     </div>
   </div>
 </template>
@@ -38,6 +37,12 @@ export default {
     .content{
       width: 100%;
       margin-top:15px;
+      p{
+        line-height: 30px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+      }
     }
   }
 </style>

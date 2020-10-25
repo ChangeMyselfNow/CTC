@@ -109,21 +109,6 @@ export default {
 				{ id: 2, idView: require('@/assets/image/1-1FRG35Q20-L.jpg') },
 				{ id: 3, idView: require('@/assets/image/287667465S30-L.jpg') },
 			],
-			// swiperOptions:{
-			//   pagination:{
-			//     el:'.swiper-pagination',
-			//     clickable:true//设置分页可点击
-			//   },
-			//   loop:true,
-			//   autoplay:true,
-			//   observe:true,
-			//   observeParents:true,
-			//   navigation:{
-			//     nextEl:'swiper-button-next',
-			//     prevEl:'swiper-button-prev',
-			//   }
-
-			// }
 		}
 	},
 	created() {
@@ -146,11 +131,6 @@ export default {
 		},
 	},
 	mounted() {},
-	watch:{
-		"$store.state.activeIndex"(nv, ov){
-			console.log(nv)
-		}
-	}
 }
 </script>
 <style lang="scss" scoped>
