@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <ctc-header></ctc-header>
-    <div class="main">
+    <header>
+      <ctc-header></ctc-header>
+    </header>
+    <section class="main">
       <div class="content">
         <router-view></router-view>
       </div>
-    </div>
-    <ctc-footer></ctc-footer>
+    </section>
+    <footer>
+      <ctc-footer></ctc-footer>
+    </footer>
   </div>
 </template>
 
