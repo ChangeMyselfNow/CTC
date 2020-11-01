@@ -19,8 +19,8 @@
     </div>
     <div class="footer_bottom">
       <div class="bottom_content">
-        <p>Copyright © 2002-2020 CTC 版权所有 技术支持：CTC检查</p>
-        <p>友情链接：<a class="link_qzjd" href="http://www.chingdnaup.com/" target="_blank">亲子鉴定</a></p>
+        <p>Copyright © 2020-2020 CTC 版权所有 技术支持：CTC检查</p>
+        <p><a class="link_qzjd" href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2020101621号-1</a></p>
       </div>
     </div>
   </div>
